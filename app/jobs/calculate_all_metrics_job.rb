@@ -1,10 +1,18 @@
 # frozen_string_literal: true
 require "rake"
 
+require "rake"
+
 class CalculateAllMetricsJob < ApplicationJob
   queue_as :scheduled
 
   def perform
-    system "rake decidim:metrics:all"
+    Rails.application.load_tasks
+    task.reenable
+    task.invoke
+  end
+
+  def task
+    Rake::Task["decidim:metrics:all"]
   end
 end
