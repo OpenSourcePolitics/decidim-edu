@@ -7,7 +7,7 @@ Decidim.configure do |config|
 
   # Change these lines to set your preferred locales
   config.default_locale = :fr
-  config.available_locales = [:fr, :en]
+  config.available_locales = [:fr]
 
   config.maximum_attachment_height_or_width = 6000
 
@@ -26,7 +26,6 @@ Decidim.configure do |config|
     Decidim::Initiatives.print_enabled = false
     Decidim::Initiatives.face_to_face_voting_allowed = false
   end
-
 
   # Custom resource reference generator method
   # config.resource_reference_generator = lambda do |resource, feature|

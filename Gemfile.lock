@@ -16,17 +16,16 @@ GIT
       decidim-core
 
 GIT
-  remote: https://github.com/Platoniq/decidim-module-decidim_awesome
-  revision: c5d778ca2eef05f2609c6978b196cb363331d5f7
+  remote: https://github.com/OpenSourcePolitics/decidim-module_cookies.git
+  revision: 980fc23144bcec7872f2de063838f9d7a4d4fe6c
+  branch: 0.21-stable
   specs:
-    decidim-decidim_awesome (0.2)
-      decidim-admin (>= 0.20.0)
-      decidim-core (>= 0.20.0)
-      redcarpet (~> 3.4)
+    decidim-cookies (0.21.0)
+      decidim-core (= 0.21.0)
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 71c1aa1edc9288fad0ec22ce38225e75ea56e195
+  revision: af541170377371903b0122c955f1578498a395e8
   branch: 0.21-stable
   specs:
     decidim (0.21.0)
@@ -551,6 +550,7 @@ GEM
     multipart-post (2.1.1)
     mustache (1.1.1)
     netrc (0.11.0)
+    newrelic_rpm (6.13.1)
     nio4r (2.5.2)
     nobspw (0.6.1)
     nokogiri (1.10.9)
@@ -844,7 +844,7 @@ DEPENDENCIES
   dalli
   decidim!
   decidim-conferences!
-  decidim-decidim_awesome!
+  decidim-cookies!
   decidim-dev!
   decidim-navbar_links!
   decidim-term_customizer!
@@ -854,6 +854,7 @@ DEPENDENCIES
   letter_opener_web (~> 1.3)
   listen (~> 3.1)
   lograge
+  newrelic_rpm
   passenger
   puma (~> 4.3)
   ruby-progressbar
@@ -869,7 +870,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.6.3p62
 
 BUNDLED WITH
    2.1.4

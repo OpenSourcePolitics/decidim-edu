@@ -16,11 +16,11 @@ gem "decidim-conferences", git: "https://github.com/decidim/decidim.git", branch
 # gem "decidim-consultations", path: "../decidim"
 # gem "decidim-initiatives", path: "../decidim"
 
+gem "decidim-cookies", git: "https://github.com/OpenSourcePolitics/decidim-module_cookies.git", branch: "0.21-stable"
 gem "decidim-navbar_links", git: "https://github.com/OpenSourcePolitics/decidim-module-navbar_links", branch: "0.21.0"
 gem "decidim-term_customizer", git: "https://github.com/OpenSourcePolitics/decidim-module-term_customizer.git", branch: "0.dev"
 
-gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome"
-
+# gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome"
 
 gem "bootsnap", "~> 1.3"
 
@@ -43,7 +43,6 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
   gem "decidim-dev", git: "https://github.com/decidim/decidim.git", branch: "0.21-stable"
-  # gem "decidim-dev", path: "../decidim"
 end
 
 group :development do
@@ -59,7 +58,7 @@ group :production do
   gem "fog-aws"
   gem "dalli"
   gem "sendgrid-ruby"
-  # gem "newrelic_rpm"
+  gem "newrelic_rpm"
   gem "lograge"
   gem "sidekiq"
   gem "sidekiq-scheduler"
